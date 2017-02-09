@@ -1,3 +1,7 @@
+<?
+mb_internal_encoding("UTF-8");
+require_once '/ajax/create.php';
+?>
 <html>
 <head>
     <link rel="stylesheet" href="\bootstrap\dist\css\bootstrap.min.css">
@@ -17,13 +21,15 @@
             <div class="form-group">
                 <div class="col-sm-5 text-right group active">
                     <div class="form-group">
-                        <div>Общее количество конфет <strong id="boys_candy"></strong></div>
+                        <div>Общее количество конфет <strong id="boys_candy"><?= $candy_boys ?></strong></div>
                         <div class="clear"></div>
                     </div>
+                    <?foreach ($boys as $boy) {?>
                         <div class="form-group">
                             <label class="col-sm-4 input-sm">
+                                <?= $boy->name ?>
                             </label>
-                            <select class="col-sm-8 input-sm" name="" disabled>
+                            <select class="col-sm-8 input-sm" name="<?= $boy->name ?>" disabled>
                                 <option>0</option>
                                 <option>1</option>
                                 <option>2</option>
@@ -31,19 +37,22 @@
                             </select>
                             <div class="clear"></div>
                         </div>
+                    <?}?>
                     <div class="form-group">
                         <button type="submit" class="btn btn-info">Таке</button>
                     </div>
                 </div>
                 <div class="col-sm-5 col-sm-offset-1 text-right group disabled">
                     <div class="form-group">
-                        <div>Общее количество конфет <strong id="girls_candy"></strong></div>
+                        <div>Общее количество конфет <strong id="girls_candy"><?= $candy_girls ?></strong></div>
                         <div class="clear"></div>
                     </div>
+                    <?foreach ($girls as $girl) {?>
                         <div class="form-group">
                             <label class="col-sm-4 input-sm">
+                                <?= $girl->name ?>
                             </label>
-                            <select class="col-sm-8 input-sm" name="">
+                            <select class="col-sm-8 input-sm" name="<?= $girl->name ?>">
                                 <option>0</option>
                                 <option>1</option>
                                 <option>2</option>
@@ -51,6 +60,7 @@
                             </select>
                             <div class="clear"></div>
                         </div>
+                    <?}?>
                     <div class="form-group">
                         <button type="submit" class="btn btn-info" disabled="disabled">Таке</button>
                     </div>
