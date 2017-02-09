@@ -67,7 +67,7 @@ require_once '/ajax/create.php';
                 </div>
                 <div class="clear"></div>
             </div>
-            <div class="form-group text-center">
+            <div class="form-group text-center hidden">
                 <button type="button" class="btn btn-info restart">New game</button>
             </div>
         </form>
