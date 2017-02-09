@@ -2,17 +2,13 @@
 require_once 'create.php';
 
 //var_dump($_POST);
-$count = 1;
-if ($count%2 == 0) {
+
+if ($_POST['floor'] == "boys") {
     search($boys);
-    add($girls,($count-1)/2);
+    add($girls,0);
 } else {
     search($girls);
-    add($boys,($count/2)-1);
-}
-$count++;
-if ($count == 11) {
-    $count = 1;
+    add($boys,0);
 }
 
 echo candy_num ($boys).';'.candy_num ($girls);

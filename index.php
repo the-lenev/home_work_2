@@ -38,6 +38,9 @@ require_once '/ajax/create.php';
                             <div class="clear"></div>
                         </div>
                     <?}?>
+                    <select class="hidden" name="floor" disabled>
+                        <option>boys</option>
+                    </select>
                     <div class="form-group">
                         <button type="submit" class="btn btn-info">Таке</button>
                     </div>
@@ -61,6 +64,9 @@ require_once '/ajax/create.php';
                             <div class="clear"></div>
                         </div>
                     <?}?>
+                    <select class="hidden" name="floor">
+                        <option>girls</option>
+                    </select>
                     <div class="form-group">
                         <button type="submit" class="btn btn-info" disabled="disabled">Таке</button>
                     </div>
