@@ -12,6 +12,7 @@ $(function() {
 				var arr_num = data.split(';');
             	$('#boys_candy').html(arr_num[0]);
 				$('#girls_candy').html(arr_num[1]);
+				$('form').find('select').val(0);
             }
         });
 	});
