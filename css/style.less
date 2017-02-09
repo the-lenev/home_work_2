@@ -1,1 +1,38 @@
 // out: style.min.css, compress: true
+
+.title {
+    margin: 15px;
+}
+form {
+    margin-top: 15px;
+    .input-sm {
+        font-size: 14px;
+    }
+    .clear {
+        clear:both;
+        display:block;
+        overflow:hidden;
+        visibility:hidden;
+        height:0px;
+    }
+    .group {
+        padding-top: 15px;
+        border: 1px solid;
+        border-radius: 5px;
+        &.disabled {
+            border-color: #ccc;
+        }
+        &.active {
+            border-color: #5bc0de;
+        }
+    }
+    .restart {
+        position: relative;
+        left:-27px;
+    }
+}
+form {
+    .active .input-sm {
+        opacity: 0.5;
+    }
+}
